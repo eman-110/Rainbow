@@ -19,7 +19,7 @@
             android:layout_marginTop="24dp"
             android:contentDescription="App Logo"
             android:scaleType="fitCenter"
-            android:src="@drawable/kawa_moka_logo"
+            android:src="@drawable/al_fatah"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
