@@ -6,9 +6,6 @@
     android:background="#FFFFFF">
 
 
-
-
-
     <ScrollView
         android:id="@+id/scrollContent"
         android:layout_width="match_parent"
@@ -67,7 +64,6 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="Camera"
-                    android:src="@drawable/camera"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +76,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="24dp"
-                android:background="@drawable/background_grocery"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/searchBar">
@@ -105,7 +100,6 @@
                     android:layout_margin="6dp"
                     android:layout_marginEnd="20dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/grocery_image"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -129,7 +123,6 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:paddingBottom="2dp"
-                    android:src="@drawable/ic_down"
                     app:layout_constraintTop_toBottomOf="@id/exploreButton"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -145,276 +138,67 @@
                 android:layout_marginTop="24dp"
                 android:overScrollMode="never"
                 android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/highlightCard"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/highlightCard">
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <LinearLayout
+                    android:id="@+id/categoryContainer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingStart="4dp"
-                    android:paddingEnd="8dp">
-
-                    <!-- Juice -->
-                    <LinearLayout
-                        android:id="@+id/juice"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
-                            android:background="@drawable/circle_border"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/drinks_juice" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:gravity="center"
-                            android:text="Drinks &amp; Juice"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="125+ Products"
-                            android:textColor="#888888"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <!-- Animal Food -->
-                    <LinearLayout
-                        android:id="@+id/animal"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
-                            android:background="@drawable/circle_border"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/animals_food" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:gravity="center"
-                            android:text="Animals Food"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="125+ Products"
-                            android:textColor="#888888"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <!-- Yummy Candy -->
-                    <LinearLayout
-                        android:id="@+id/yummy_candy"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
-                            android:background="@drawable/circle_border"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/yummy_candy" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:gravity="center"
-                            android:text="Yummy Candy"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="125+ Products"
-                            android:textColor="#888888"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                    <!-- Fresh Fruit -->
-                    <LinearLayout
-                        android:id="@+id/fresh_fruit"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="72dp"
-                            android:layout_height="72dp"
-                            android:background="@drawable/circle_border"
-                            android:padding="8dp"
-                            android:scaleType="centerInside"
-                            android:src="@drawable/fresh_fruit" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:gravity="center"
-                            android:text="Fresh Fruit"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="125+ Products"
-                            android:textColor="#888888"
-                            android:textSize="12sp" />
-                    </LinearLayout>
-
-                </LinearLayout>
+                    android:paddingEnd="8dp" />
             </HorizontalScrollView>
 
-            <!-- Daily item -->
+
+            <!-- Promo Card Scroll Section -->
             <HorizontalScrollView
                 android:id="@+id/horizontalScroll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:overScrollMode="never"
+                android:layout_marginTop="16dp"
                 android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/categoryScroll"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/categoryScroll">
+                app:layout_constraintEnd_toEndOf="parent">
 
                 <LinearLayout
+                    android:id="@+id/cardContainer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:paddingStart="8dp"
                     android:paddingEnd="8dp">
+                <!-- Hidden promo card template -->
+                <FrameLayout
+                    android:id="@+id/promoCardTemplate"
+                    android:layout_width="194dp"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="12dp"
+                    android:visibility="gone"
+                    android:padding="16dp">
 
-                    <!-- Card 1 -->
-                    <FrameLayout
-                        android:id="@+id/cardimg1"
-                        android:layout_width="194dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_vegetable_card"
-                        android:padding="16dp">
+                    <TextView
+                        android:id="@+id/promoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:text="Promo Title"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/cardTitle1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top|start"
-                            android:text="Daily Fresh\nVegetables"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/shopNowBtn1"
-                            android:layout_width="103dp"
-                            android:layout_height="34dp"
-                            android:layout_gravity="bottom|start"
-                            android:backgroundTint="#FF6F00"
-                            android:text="Shop Now →"
-                            android:textColor="#FFFFFF"
-                            android:textSize="9dp" />
-                    </FrameLayout>
-
-                    <!-- Card 2 -->
-                    <FrameLayout
-                        android:id="@+id/cardimg2"
-                        android:layout_width="194dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_milk_card"
-                        android:padding="16dp">
-
-                        <TextView
-                            android:id="@+id/cardTitle2"
-                            android:layout_width="94dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top|start"
-                            android:text="Everyday Fresh Milk"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/shopNowBtn2"
-                            android:layout_width="103dp"
-                            android:layout_height="34dp"
-                            android:layout_gravity="bottom|start"
-                            android:backgroundTint="#FF6F00"
-                            android:text="Shop Now →"
-                            android:textColor="#FFFFFF"
-                            android:textSize="9dp" />
-                    </FrameLayout>
-
-                    <!-- Card 3 -->
-                    <FrameLayout
-                        android:id="@+id/cardimg3"
-                        android:layout_width="194dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_vegetable_card"
-                        android:padding="16dp">
-
-                        <TextView
-                            android:id="@+id/cardTitle3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="top|start"
-                            android:text="Daily Fresh\nVegetables"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/shopNowBtn3"
-                            android:layout_width="103dp"
-                            android:layout_height="34dp"
-                            android:layout_gravity="bottom|start"
-                            android:backgroundTint="#FF6F00"
-                            android:text="Shop Now →"
-                            android:textColor="#FFFFFF"
-                            android:textSize="9dp" />
-                    </FrameLayout>
-
+                    <Button
+                        android:id="@+id/promoButton"
+                        android:layout_width="103dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="bottom|start"
+                        android:backgroundTint="#FF6F00"
+                        android:text="Shop Now →"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp" />
+                </FrameLayout>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -469,9 +253,9 @@
                         app:cardElevation="0dp">
 
                         <LinearLayout
+                            android:id="@+id/bg_flash_sale1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bg_flash_sale"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
                             android:padding="16dp">
@@ -480,8 +264,7 @@
                                 android:id="@+id/FreshCardImg1"
                                 android:layout_width="160dp"
                                 android:layout_height="100dp"
-                                android:scaleType="centerInside"
-                                android:src="@drawable/flash_vegetables" />
+                                android:scaleType="centerInside" />
 
                             <TextView
                                 android:id="@+id/FreshCardText1"
@@ -553,10 +336,10 @@
                         app:cardElevation="0dp">
 
                         <LinearLayout
+                            android:id="@+id/bg_flash_sale2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal"
-                            android:background="@drawable/bg_flash_sale_green"
                             android:orientation="vertical"
                             android:padding="16dp">
 
@@ -564,8 +347,7 @@
                                 android:id="@+id/FreshCardImg2"
                                 android:layout_width="160dp"
                                 android:layout_height="100dp"
-                                android:scaleType="centerInside"
-                                android:src="@drawable/flash_snacks" />
+                                android:scaleType="centerInside" />
 
                             <TextView
                                 android:id="@+id/FreshCardText2"
@@ -645,570 +427,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flashSalesScroll" />
 
-            <!-- Scroll 1 -->
-            <HorizontalScrollView
-                android:id="@+id/freshScroll1"
-                android:layout_width="0dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fruitsRecycler"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:orientation="horizontal"
                 android:overScrollMode="never"
-                android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/freshFruitsHeading">
+                app:layout_constraintTop_toBottomOf="@id/freshFruitsHeading" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp">
-
-                    <!-- Potato 1-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg1_1"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/potato" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price1_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="75.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer1_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn1_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText1_1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn1_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText1_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Potato New\n1KG - Approx 6 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Onion 1-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg1_2"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/onion" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price1_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="40.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer1_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn1_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText1_2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn1_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText1_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Onion Regular\n500g - Approx 7 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Tomato 1 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg1_3"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/tomato" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price1_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="60.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer1_3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn1_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText1_3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn1_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText1_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Tomato Regular\n100g - Approx 12 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <!-- Scroll 2 -->
-            <HorizontalScrollView
-                android:id="@+id/freshScroll2"
-                android:layout_width="0dp"
+            <!-- Vegetables Row -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/vegetablesRecycler"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:orientation="horizontal"
                 android:overScrollMode="never"
-                android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/freshScroll1">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp">
-
-                    <!-- carrot 1-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg2_1"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/carrots" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price2_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="120.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer2_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn2_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText2_1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn2_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText2_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Carrot Premium\nPrepak Bag 1 kg"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- lemons 1-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg2_2"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/lemons" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price2_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="70.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer2_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn2_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText2_2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn2_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText2_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Lemon Farmi\n250g - Approx 33 pieces."
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- ginger 1 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg2_3"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/ginger" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price2_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="147.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer2_3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn2_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText2_3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn2_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText2_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Ginger China\n250g - Approx 9 Pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
+                app:layout_constraintTop_toBottomOf="@id/fruitsRecycler" />
             <!-- Banner -->
             <ImageView
                 android:id="@+id/firstOrderBanner"
@@ -1219,10 +459,9 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="10% discount banner"
                 android:scaleType="fitCenter"
-                android:src="@drawable/offer_bar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/freshScroll2" />
+                app:layout_constraintTop_toBottomOf="@id/vegetablesRecycler" />
 
             <!-- Recommended for you-->
             <TextView
@@ -1238,574 +477,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/firstOrderBanner" />
 
-            <!-- Scroll 3 -->
-            <HorizontalScrollView
-                android:id="@+id/freshScroll3"
-                android:layout_width="0dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendedRecycler1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
                 android:overScrollMode="never"
-                android:scrollbars="none"
+                tools:listitem="@layout/item_product_card"
+                android:clipToPadding="false"
                 app:layout_constraintTop_toBottomOf="@id/recommendTitle"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-                <LinearLayout
-                    android:id="@+id/recommendedLinearLayout1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp">
-
-
-
-            <!-- Potato 2-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg3_1"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/potato" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price3_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="75.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer3_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn3_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText3_1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn3_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText3_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Potato New\n1KG - Approx 6 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Onion 2-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg3_2"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/onion" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price3_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="40.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer3_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn3_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText3_2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn3_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText3_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Onion Regular\n500g - Approx 7 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- Tomato 2 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:gravity="center_horizontal"
-                            android:background="@drawable/rectangular_bg"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg3_3"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/tomato" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price3_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="60.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer3_3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn3_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText3_3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn3_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText3_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Tomato Regular\n100g - Approx 12 pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <!-- Scroll 4 -->
-            <HorizontalScrollView
-                android:id="@+id/freshScroll4"
-                android:layout_width="0dp"
+            <!-- Second Recommended Recycler -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendedRecycler2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:orientation="horizontal"
                 android:overScrollMode="never"
-                android:scrollbars="none"
-                app:layout_constraintTop_toBottomOf="@id/freshScroll3"
+                tools:listitem="@layout/item_product_card"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/recommendedRecycler1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <LinearLayout
-                    android:id="@+id/recommendedLinearLayout2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp">
-
-
-            <!-- carrot 2-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg4_1"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/carrots" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price4_1"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="120.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer4_1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn4_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText4_1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn4_1"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText4_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Carrot Premium\nPrepak Bag 1 kg"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- lemons 2-->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg4_2"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/lemons" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price4_2"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="70.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer4_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn4_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText4_2"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn4_2"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText4_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Lemon Farmi\n250g - Approx 33 pieces."
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <!-- ginger 2 -->
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
-                        app:cardElevation="0dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="210dp"
-                            android:background="@drawable/rectangular_bg"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            android:padding="12dp">
-
-                            <ImageView
-                                android:id="@+id/CardImg4_3"
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/ginger" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="6dp"
-                                android:gravity="center_vertical"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/Price4_3"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="147.00 PKR"
-                                    android:textColor="#000"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <LinearLayout
-                                    android:id="@+id/quantityContainer4_3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="center"
-                                    android:visibility="visible">
-
-                                    <ImageView
-                                        android:id="@+id/minusBtn4_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_sub"
-                                        android:visibility="gone"
-                                        android:contentDescription="Minus"/>
-
-                                    <TextView
-                                        android:id="@+id/counterText4_3"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="0"
-                                        android:textSize="18sp"
-                                        android:textStyle="bold"
-                                        android:visibility="gone"
-                                        android:layout_marginHorizontal="10dp"/>
-
-                                    <ImageView
-                                        android:id="@+id/plusBtn4_3"
-                                        android:layout_width="24dp"
-                                        android:layout_height="24dp"
-                                        android:src="@drawable/ic_add"
-                                        android:contentDescription="Plus"/>
-
-                                </LinearLayout>
-                            </LinearLayout>
-
-                            <TextView
-                                android:id="@+id/CardText4_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Ginger China\n250g - Approx 9 Pieces"
-                                android:textColor="#666666"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-            </HorizontalScrollView>
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <!-- Vendors -->
             <TextView
@@ -1819,7 +519,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/freshScroll4" />
+                app:layout_constraintTop_toBottomOf="@id/recommendedRecycler2" />
 
             <!-- Vendor 1 -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1827,7 +527,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:background="@drawable/organic_card_background"
                 android:padding="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1839,7 +538,6 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/nature_food_logo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -1897,34 +595,34 @@
                     app:layout_constraintTop_toBottomOf="@id/organic_market">
 
                     <ImageView
+                        android:id="@+id/juice"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_juice" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/granola"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_granola" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/orange_juice"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_orange_juice" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/basket"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_basket" />
+                        android:layout_margin="4dp"/>
 
                     <ImageView
+                        android:id="@+id/product_orange_juice"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_orange_juice" />
+                        android:layout_margin="4dp" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -1936,7 +634,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginBottom="12dp"
-                android:background="@drawable/safeway_background"
                 android:padding="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1948,7 +645,6 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/safeway_logo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -2006,45 +702,45 @@
                     app:layout_constraintTop_toBottomOf="@id/organic_market1">
 
                     <ImageView
+                        android:id="@+id/juice1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_juice" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/granola1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_granola" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/product_orange_juice1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_orange_juice" />
+                        android:layout_margin="4dp" />
 
                     <ImageView
+                        android:id="@+id/basket1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_basket" />
+                        android:layout_margin="4dp"/>
 
                     <ImageView
+                        android:id="@+id/orange_juice1"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_margin="4dp"
-                        android:src="@drawable/product_orange_juice" />
+                        android:layout_margin="4dp"/>
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <ImageView
+                android:id="@+id/black_img"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/blank_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/topVendorSection2"/>

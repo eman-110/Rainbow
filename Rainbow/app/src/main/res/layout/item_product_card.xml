@@ -16,8 +16,7 @@
             android:id="@+id/productImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/potato" />
+            android:scaleType="fitCenter"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +48,6 @@
                     android:id="@+id/minusBtn"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_sub"
                     android:visibility="gone"
                     android:contentDescription="Minus"/>
 
@@ -67,7 +65,6 @@
                     android:id="@+id/plusBtn"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_add"
                     android:contentDescription="Plus"/>
 
             </LinearLayout>

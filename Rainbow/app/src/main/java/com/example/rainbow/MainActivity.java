@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.squareup.picasso.Picasso;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageButton middleImage;
@@ -24,5 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762322/al_fatah_dtphq1.png")
+                .into(middleImage);
     }
 }

@@ -59,4 +59,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
     implementation(libs.volley)
     implementation (libs.picasso)
+    implementation(libs.recyclerview)
+
 }
+

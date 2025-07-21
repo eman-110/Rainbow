@@ -28,8 +28,7 @@
                 android:id="@+id/bgImage"
                 android:layout_width="match_parent"
                 android:layout_height="286dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/description_bg" />
+                android:scaleType="centerCrop"/>
 
             <!-- Apple Image -->
             <ImageView
@@ -38,7 +37,7 @@
                 android:layout_height="276dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-165dp"
-                android:src="@drawable/apple" />
+                />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -150,13 +149,13 @@
 
             <!-- Bottom Spacer / Image -->
             <ImageView
+                android:id="@+id/blackimg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="24dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/blank_img" />
+                android:scaleType="fitCenter"/>
 
         </LinearLayout>
     </ScrollView>

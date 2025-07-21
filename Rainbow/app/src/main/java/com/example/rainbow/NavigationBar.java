@@ -10,9 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.squareup.picasso.Picasso;
+
 public class NavigationBar extends AppCompatActivity {
 
-    ImageView hamburgerIcon, navHome, navFavorites, navCart, navNotification, navProfile;
+    ImageView hamburgerIcon, navHome, navFavorites, navCart, navNotification, navProfile, profileIcon;
     TextView pageTitle;
 
     @Override
@@ -23,6 +25,7 @@ public class NavigationBar extends AppCompatActivity {
         // Top bar elements
         hamburgerIcon = findViewById(R.id.hamburgerIcon);
         pageTitle = findViewById(R.id.pageTitle);
+        profileIcon = findViewById(R.id.profileIcon);
 
         // Bottom nav icons
         navHome = findViewById(R.id.navHome);
@@ -40,6 +43,34 @@ public class NavigationBar extends AppCompatActivity {
 
         // Set bottom nav click listeners
         setupBottomNav();
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762237/menu_wl9kcy.png")
+                .into(hamburgerIcon);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762322/al_fatah_dtphq1.png")
+                .into(profileIcon);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762280/ic_home_gf5dzn.png")
+                .into(navHome);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762288/ic_heart_xc3fl4.png")
+                .into(navFavorites);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762293/ic_cart_h9qrm5.png")
+                .into(navCart);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762294/ic_bell_xdkvnc.png")
+                .into(navNotification);
+
+        Picasso.get()
+                .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762271/ic_user_djnyp5.png")
+                .into(navProfile);
+
     }
 
     // Function to show popup menu
