@@ -4,9 +4,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.os.Handler;
 import android.widget.TextView;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -70,6 +77,43 @@ public class NavigationBar extends AppCompatActivity {
         Picasso.get()
                 .load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762271/ic_user_djnyp5.png")
                 .into(navProfile);
+
+
+        new Handler().postDelayed(() -> {
+            LinearLayout cookieBanner = findViewById(R.id.cookieBanner);
+            Button acceptBtn = findViewById(R.id.acceptCookiesBtn);
+            Button declineBtn = findViewById(R.id.declineCookiesBtn);
+
+            cookieBanner.setVisibility(View.INVISIBLE); // Start invisible
+
+            // Run after layout pass to get accurate height
+            cookieBanner.post(() -> {
+                int bannerHeight = cookieBanner.getHeight();
+                cookieBanner.setTranslationY(bannerHeight);
+                cookieBanner.setVisibility(View.VISIBLE);
+
+                cookieBanner.animate()
+                        .translationY(0)
+                        .setDuration(500)
+                        .start();
+            });
+
+            acceptBtn.setOnClickListener(v -> {
+                int bannerHeight = cookieBanner.getHeight();
+                cookieBanner.animate()
+                        .translationY(bannerHeight)
+                        .setDuration(500)
+                        .withEndAction(() -> cookieBanner.setVisibility(View.GONE))
+                        .start();
+            });
+
+            declineBtn.setOnClickListener(v -> {
+                Toast.makeText(NavigationBar.this, "You must accept cookies to continue.", Toast.LENGTH_SHORT).show();
+            });
+
+        }, 2000);
+// 2 second delay
+
 
     }
 
