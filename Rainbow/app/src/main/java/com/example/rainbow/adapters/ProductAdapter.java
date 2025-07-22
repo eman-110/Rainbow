@@ -1,5 +1,6 @@
 package com.example.rainbow.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     private Context context;
     private List<Product> productList;
+
+    ImageView minusBtn, plusBtn;
 
     public ProductAdapter(Context context, List<Product> products) {
         this.context = context;
@@ -48,6 +51,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             holder.counterText.setVisibility(View.VISIBLE);
             holder.minusBtn.setVisibility(View.VISIBLE);
         });
+        Picasso.get().load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762272/ic_sub_nndqn1.png").into(holder.minusBtn);
+        Picasso.get().load("https://res.cloudinary.com/dgtk4rthy/image/upload/v1752762304/ic_add_ylih4p.png").into(holder.plusBtn);
 
         holder.minusBtn.setOnClickListener(v -> {
             int count = Integer.parseInt(holder.counterText.getText().toString());
