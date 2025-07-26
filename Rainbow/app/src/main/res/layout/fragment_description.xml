@@ -27,8 +27,8 @@
             <ImageView
                 android:id="@+id/bgImage"
                 android:layout_width="match_parent"
-                android:layout_height="286dp"
-                android:scaleType="centerCrop"/>
+                android:layout_height="348dp"
+                android:scaleType="centerCrop" />
 
             <!-- Apple Image -->
             <ImageView
